@@ -30,14 +30,33 @@
             object-fit: cover;
             margin-bottom: 20px; 
         }
-        .header h1 {
+        .header h1, .header h2 {
             font-weight: bold;
         }
-        .services, .adventages {
+        .header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .services, .advantages {
             padding: 20px;
             background: #222;
             margin: 10px;
             border-radius: 8px;
+        }
+        .services h2, .advantages h2 {
+            margin-bottom: 10px;
+        }
+        .services ul, .advantages ul {
+            list-style: none;
+        }
+        .services li, .advantages li {
+            margin-bottom: 15px;
+        }
+        .advantages h3 {
+            font-size: 1.2em;
+        }
+        .advantages p {
+            margin-top: 5px;
         }
         a {
             color: #007bff;
@@ -51,152 +70,138 @@
             text-align: center;
         }
         .ring {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ring i {
-  position: absolute;
-  inset: 0;
-  border: 2px solid #fff;
-  transition: 0.5s;
-}
-.ring i:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: animate 6s linear infinite;
-}
-.ring i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate 4s linear infinite;
-}
-.ring i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate2 10s linear infinite;
-}
-.ring:hover i {
-  border: 6px solid var(--clr);
-  filter: drop-shadow(0 0 20px var(--clr));
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-.login {
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-}
-
-
-.login h2 {
-  font-size: 2em;
-  color: #fff;
-}
-.login .inputBx {
-  position: relative;
-  width: 100%;
-}
-.login .inputBx input {
-  position: relative;
-  width: 100%;
-  padding: 12px 20px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 40px;
-  font-size: 1.2em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
-}
-.login .inputBx input[type="submit"] {
-  width: 100%;
-  background: #0078ff;
-  background: linear-gradient(45deg, #ff357a, #fff172);
-  border: none;
-  cursor: pointer;
-}
-.login .inputBx input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-.login .links {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-.login .links a {
-  color: #fff;
-  text-decoration: none;
-}
-
- </style>
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .ring i {
+            position: absolute;
+            inset: 0;
+            border: 2px solid #fff;
+            transition: 0.5s;
+        }
+        .ring i:nth-child(1) {
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            animation: animate 6s linear infinite;
+        }
+        .ring i:nth-child(2) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate 4s linear infinite;
+        }
+        .ring i:nth-child(3) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate2 10s linear infinite;
+        }
+        .ring:hover i {
+            border: 6px solid var(--clr);
+            filter: drop-shadow(0 0 20px var(--clr));
+        }
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes animate2 {
+            0% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        .login {
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .login h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+        .login .inputBx {
+            position: relative;
+            width: 100%;
+        }
+        .login .inputBx input {
+            width: 100%;
+            padding: 12px 20px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 40px;
+            font-size: 1.2em;
+            color: #fff;
+            box-shadow: none;
+            outline: none;
+        }
+        .login .inputBx input[type="submit"] {
+            background: linear-gradient(45deg, #ff357a, #fff172);
+            border: none;
+            cursor: pointer;
+        }
+        .login .inputBx input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .login .links {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .login .links a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <img src="SFBlackTheme.png" alt="Description of your image">
+        <img src="SFBlackTheme.png" alt="Sahel Fleet Logo">
         <h1>SF</h1>
         <h2>Sahel Fleet</h2>
         <p>Your best tool for fleet management!</p>
     </header>
     <main>
         <section class="services">
-            <h2>Our Services</h2><br>
-            <p>SF offers a range of services tailored to meet your fleet management needs:</p><br>
+            <h2>Our Services</h2>
+            <p>SF offers a range of services tailored to meet your fleet management needs:</p>
             <ul>
-                <li >Fleet Management</li><br><br>
-                <li >Mission Planning and Assignment</li><br><br>
+                <li>Fleet Management</li>
+                <li>Mission Planning and Assignment</li>
                 <li>Driver Management</li>
-                <br><br><br>
             </ul>
         </section>
-        <section class="adventages">
-            <h2>Why Sahel Fleet?</h2><br>
+        <section class="advantages">
+            <h2>Why Sahel Fleet?</h2>
             <ul>
-                <li><h3>Boost your fleet efficiency</h3> 
-                   <p>Having a clear vision of your operations, you will optimize the activity of your fleet.</p> 
-                </li><br>
-                <li><h3>Comply with regulation</h3> 
+                <li>
+                    <h3>Boost your fleet efficiency</h3>
+                    <p>Having a clear vision of your operations, you will optimize the activity of your fleet.</p>
+                </li>
+                <li>
+                    <h3>Comply with regulation</h3>
                     <p>We use our data to make you comply with maritime regulations.</p>
-                </li><br>
-                <li><h3></h3> 
-                    <p></p>
-                </li><br>
-
-
-                <br><br><br><br><br>
-                
+                </li>
+                <li>
+                    <h3>Enhance Safety</h3>
+                    <p>Implement safety protocols and monitor compliance to ensure the well-being of your team and assets.</p>
+                </li>
             </ul>
         </section>
-        <section>
-             
-        </section>
-  
     </main>
     <footer>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <!-- Login form from the first part -->
         <div class="ring">
             <i style="--clr:#00ff0a;"></i>
             <i style="--clr:#ff0057;"></i>
